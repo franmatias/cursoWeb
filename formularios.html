@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plantilla HTML </title>
+  <!-- Enlace a la hoja de estilos -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- Insertar un favicon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Contenedor -->
+  <div class="contenedor">
+    <!-- Cabecera -->
+    <header>Logo</header>
+    <!-- Navegación -->
+    <nav>
+      <ul>
+        <li><a href="">item 1</a></li>
+        <li><a href="">item 2</a></li>
+        <li><a href="">item 3</a></li>
+        <li><a href="">item 4</a></li>
+        <li><a href="">item 5</a></li>
+      </ul>
+    </nav>
+    <!-- Contenido principal de la página -->
+    <main>
+     <h1>Formularios</h1>
+     <form action="https://www.servidor.com/ruta/script-procesar-formulario" method="post">
+      <fieldset>
+        <legend>Datos personales</legend>
+        <label for="nombre">Nombre: <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre" required="required"></label><br>
+        <label for="numsecreto">Núm secreto: <input type="password" name="numsecreto" id="numsecreto" size="5"></label><br>
+        <label for="dni">DNI: <input type="text" name="dni" id="dni" pattern="[0-9]{8}[A-Z]{1}" maxlength="9" size="9" placeholder="99999999A"></label><br>
+        <label for="tlfn">Tlfn: <input type="tel" name="tlfn" id="tlfn" placeholder="+34900999999" size="12"></label><br>
+        <label for="mail">Email: <input type="email" name="email" id="email"></label><br>
+        <label for="fechnac">Fecha nacimiento: <input type="date" name="fechnac" id="fechnac"></label><br>
+        <label for="numhijos">Num. de hijos: <input type="number" name="numhijos" id="numhijos" value="0" min="0" max="100" step="1" size="2"></label> <br>
+        <label for="horasalida">Hora de salida: <input type="time" name="horasalida" id="horasalida"></label><br>
+        <label for="descripcion">Descripción: <br><textarea name="descripcion" id="descripcion" cols="30" rows="5" placeholder="Insertar descripción"></textarea></label><br>    
+
+      </fieldset>
+      <fieldset>
+        <legend>Preferencias personales</legend>
+        <label for="colorpref">Color preferido<input type="color" name="colorpref" id="colorpref"></label><br>
+        <label for="hobbies"> Hobbies:<br>
+          <input type="checkbox" name="hobbies" id="hobbies" value="lectura"> Lectura <br>
+          <input type="checkbox" name="hobbies" id="hobbies" value="deportes"> Deportes <br>
+          <input type="checkbox" name="hobbies" id="hobbies" value="videojuegos"> Videojuegos <br>
+        </label>
+        <br>
+        <label for="pago">Forma de pago <br>
+          <input type="radio" name="pago" id="pago" value="tarjeta">Tarjeta <br> 
+          <input type="radio" name="pago" id="pago" value="paypall">Paypall <br> 
+          <input type="radio" name="pago" id="pago" value="bizum">Bizum <br> 
+        </label>
+        <label for="viajar">Forma de viajar: 
+          <select name="viajar" id="viajar">
+            <option value="" selected="selected">Selecciona opción</option>
+            <option value="avion">Avión</option>
+            <option value="barco">Barco</option>
+            <option value="bus">Bus</option>
+          </select>
+        </label> <br>
+        <label for="valoracion">Valorar servicio: <input type="range" name="valoracion" id="valoracion" min="0" max="10" step="1"></label>
+       
+      </fieldset> 
+      <button type="submit">Envíar</button>
+     </form>
+    </main>
+    <!-- Contenido secundario -->
+    <aside>
+      <h3>ASIDE</h3>
+      <p>lorem</p>
+    </aside>
+    <!-- Pie de página -->
+    <footer><small>Todos los derechos reservados</small></footer>
+  </div>
+   <!-- Javascript -->
+  <script src="assets/js/apps.js"></script>
+</body>
+</html>
